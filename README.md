@@ -1,7 +1,7 @@
 
 
 # Description
-This application allows users to manually create guitar tabs by selecting strings and frets. It provides an intuitive interface for inputting musical notes and generating corresponding guitar tablature.
+This Java application allows users to manually create guitar tabs by selecting strings and frets. It provides an intuitive interface for inputting musical notes and generating corresponding guitar tablature.
 
 # Features
 Manual Input
@@ -14,6 +14,9 @@ Tab Generation
 - Automatically generates guitar tabs based on user input. Once the user has added notes, the application processes the inputs and displays the corresponding guitar tablature.
 - The generated tabs are displayed in a user-friendly format, and the application supports multiple lines of tab for different strings.
 
+# Tools Used
+- Java Swing
+- Java AWT ( Abstract Window Toolkit)
 
 
 
