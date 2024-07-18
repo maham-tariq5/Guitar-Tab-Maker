@@ -23,10 +23,16 @@ public class Main {
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int string = Integer.parseInt(stringField.getText());
-                int fret = Integer.parseInt(fretField.getText());
-                guitarTab.addNote(string, fret);
-                updateTabArea(tabArea);
+                try {
+                    int string = Integer.parseInt(stringField.getText());
+                    int fret = Integer.parseInt(fretField.getText());
+                    guitarTab.addNote(string, fret);
+                    updateTabArea(tabArea);
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(frame, "Please enter valid numbers for string and fret.");
+                } catch (IllegalArgumentException ex) {
+                    JOptionPane.showMessageDialog(frame, ex.getMessage());
+                }
             }
         });
 
