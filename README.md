@@ -10,3 +10,6 @@ Tab Generation:
 Automatically generates guitar tabs based on user input.
 Customization: 
 Allows customization of tablature formatting and layout.
+
+# Installation
+
