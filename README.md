@@ -21,4 +21,4 @@ javac Main.java
 java Main
 ```
 # User Interface
-(images/GUI.png)
+(https://github.com/maham-tariq5/Guitar-Tab-Maker/blob/main/GUI.png)
