@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.io.*;
 
 public class Tab {
     private List<String> tabLines;
@@ -13,17 +12,43 @@ public class Tab {
         }
     }
 
-    public List<String> getTabLines() {
-        return tabLines;
-    }
-
     public void addNote(int string, int fret) {
         if (string < 1 || string > 6) {
             throw new IllegalArgumentException("Invalid string number");
         }
-        String line = tabLines.get(string - 1);
-        line += fret + "-";
-        tabLines.set(string - 1, line);
+        
+        // Determine the maximum length of the existing lines
+        int maxLength = 0;
+        for (String line : tabLines) {
+            if (line.length() > maxLength) {
+                maxLength = line.length();
+            }
+        }
+        
+        // Pad each line with hyphens to make all lines the same length
+        for (int i = 0; i < tabLines.size(); i++) {
+            StringBuilder line = new StringBuilder(tabLines.get(i));
+            while (line.length() < maxLength) {
+                line.append("-");
+            }
+            tabLines.set(i, line.toString());
+        }
+        
+        // Append the new note to the specified string
+        StringBuilder stringLine = new StringBuilder(tabLines.get(string - 1));
+        stringLine.append(fret);
+        tabLines.set(string - 1, stringLine.toString());
+
+        // Add hyphens to the other lines to keep them aligned
+        for (int i = 0; i < tabLines.size(); i++) {
+            if (i != string - 1) {
+                tabLines.set(i, tabLines.get(i) + "-");
+            }
+        }
+    }
+
+    public List<String> getTabLines() {
+        return tabLines;
     }
 
     public void printTab() {
@@ -31,26 +56,4 @@ public class Tab {
             System.out.println(line);
         }
     }
-
-    public void saveToFile(String filename) throws IOException {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
-            for (String line : tabLines) {
-                writer.write(line);
-                writer.newLine();
-            }
-        }
-    }
-    
-    public void loadFromFile(String filename) throws IOException {
-        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
-            tabLines.clear();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                tabLines.add(line);
-            }
-        }
-    }
-
-
-
 }
