@@ -13,3 +13,10 @@ Allows customization of tablature formatting and layout.
 
 # Installation
 
+Build and Run
+
+```
+cd guitar-tab-maker
+javac Main.java
+java Main
+```
