@@ -20,3 +20,5 @@ cd guitar-tab-maker
 javac Main.java
 java Main
 ```
+# User Interface
+GUI.png
