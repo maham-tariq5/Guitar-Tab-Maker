@@ -9,6 +9,11 @@ Manual Input
 Error handling is implemented to ensure valid input.
 - Users will receive prompts if they enter string numbers outside the range of 1 to 6 or fret numbers outside the range of 0 to 25.
 
+Tab Generation
+
+- Automatically generates guitar tabs based on user input. Once the user has added notes, the application processes the inputs and displays the corresponding guitar tablature.
+- The generated tabs are displayed in a user-friendly format, and the application supports multiple lines of tab for different strings.
+
 
 
 
