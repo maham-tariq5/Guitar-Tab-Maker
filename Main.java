@@ -26,6 +26,15 @@ public class Main {
                 try {
                     int string = Integer.parseInt(stringField.getText());
                     int fret = Integer.parseInt(fretField.getText());
+
+                    if (string < 1 || string > 6) {
+                        throw new IllegalArgumentException("String number must be between 1 and 6.");
+                    }
+
+                    if (fret < 0 || fret > 25) {
+                        throw new IllegalArgumentException("Fret number must be between 0 and 25.");
+                    }
+
                     guitarTab.addNote(string, fret);
                     updateTabArea(tabArea);
                 } catch (NumberFormatException ex) {
