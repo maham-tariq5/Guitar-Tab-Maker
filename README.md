@@ -21,4 +21,4 @@ javac Main.java
 java Main
 ```
 # User Interface
-GUI.png
+(images/GUI.png)
