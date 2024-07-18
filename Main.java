@@ -31,7 +31,7 @@ public class Main {
                         throw new IllegalArgumentException("String number must be between 1 and 6.");
                     }
 
-                    if (fret < 0 || fret > 25) {
+                    if (fret < 0 || fret > 24) {
                         throw new IllegalArgumentException("Fret number must be between 0 and 25.");
                     }
 
