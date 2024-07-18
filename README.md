@@ -16,7 +16,7 @@ Tab Generation
 
 # Tools Used
 - Java Swing
-- Java AWT ( Abstract Window Toolkit)
+- Java AWT (Abstract Window Toolkit)
 
 
 
