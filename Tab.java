@@ -4,9 +4,9 @@ import java.util.List;
 public class Tab {
     private List<String> tabLines;
 
+    // Constructor to initialize the tab with six empty strings (one for each guitar string)
     public Tab() {
         tabLines = new ArrayList<>();
-        // Initialize with six empty strings for six guitar strings
         for (int i = 0; i < 6; i++) {
             tabLines.add("");
         }
