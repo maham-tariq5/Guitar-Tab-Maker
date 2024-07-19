@@ -12,6 +12,7 @@ public class Tab {
         }
     }
 
+      // Method to add a note to a specified string at a specified fret
     public void addNote(int string, int fret) {
         if (string < 1 || string > 6) {
             throw new IllegalArgumentException("Invalid string number");
